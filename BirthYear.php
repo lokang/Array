@@ -11,14 +11,16 @@ class BirthYear
     public function year(){
         $years = array(date("Y"));
         foreach($years as $year){
+            echo "<select name=\"birthYear\" id=\"birthYear-select\">";
             for($i=0; $i < 8; $i++){
                 $y = $year++;
-                echo $y."<br>";
+                echo "<option"."Choose year"."</option>";
+                echo "<option>".$y."<br>"."</option>";
             }
+            echo "</select>";
         }
     }
 }
-
 $y = new BirthYear();
 echo $y->year();
 ?>
